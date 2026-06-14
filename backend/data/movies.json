@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Interstellar",
+    "genre": "Sci-Fi Drama",
+    "summary": "A team of astronauts travels through a wormhole in search of a new home for humanity while exploring love, sacrifice, and time.",
+    
+    "dna": {
+      "structure": "Linear",
+      "tone": "Emotional",
+      "pace": "Slow Burn",
+      "conflict": "Existential",
+      "ending": "Emotional Resolution",
+      "protagonist_arc": "Self Sacrifice"
+    },
+    "pulsegraph": [20, 35, 50, 75, 95]
+  },
+
+  {
+    "title": "Memento",
+    "genre": "Psychological Thriller",
+    "summary": "A man with short-term memory loss investigates his wife's murder using notes and tattoos in a nonlinear narrative.",
+
+    "dna": {
+      "structure": "Nonlinear",
+      "tone": "Psychological",
+      "pace": "Fragmented",
+      "conflict": "Internal",
+      "ending": "Twist Ending",
+      "protagonist_arc": "Mental Collapse"
+    },
+    "pulsegraph": [30, 45, 40, 70, 100]
+  },
+
+  {
+    "title": "KGF",
+    "genre": "Action Drama",
+    "summary": "A poor young man rises through the violent gold mafia world seeking power, respect, and destiny.",
+
+    "dna": {
+      "structure": "Rise to Power",
+      "tone": "Aggressive",
+      "pace": "Escalating",
+      "conflict": "External",
+      "ending": "Victory Climax",
+      "protagonist_arc": "Power Ascension"
+    },
+    "pulsegraph": [25, 40, 60, 80, 100]
+  }
+]
