@@ -10,18 +10,24 @@ function ScoreBar({
         marginBottom: "15px"
       }}
     >
+    
+    <div
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+    marginBottom: "6px"
+  }}
+>
 
-      <p>
+  <strong>
+    {label}
+  </strong>
 
-        <strong>
-          {label}
-        </strong>
+  <span>
+    {score}/100
+  </span>
 
-        {" "}
-
-        {score}/100
-
-      </p>
+</div>
 
       <div
         style={{
@@ -36,6 +42,7 @@ function ScoreBar({
           style={{
             width: `${score}%`,
             height: "100%",
+            transition: "width 1s ease",
             background:
 
   score >= 90

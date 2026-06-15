@@ -50,7 +50,7 @@
 {
   "title": "Inception",
   "genre": "Sci-Fi Thriller",
-  "summary": "A skilled thief enters dreams to steal and plant ideas inside people's minds. The story explores reality, dreams, guilt, memory, subconscious conflict, deception, and layered narratives.",
+  "summary": "A skilled thief enters dreams to steal secrets and plant ideas inside people's minds. The story explores dreams, subconscious reality, memory, guilt, deception, layered narratives, imagination, and psychological conflict.",
   "dna": {
     "structure": "Nonlinear",
     "tone": "Psychological",
@@ -65,7 +65,7 @@
 {
   "title": "The Prestige",
   "genre": "Mystery Thriller",
-  "summary": "Two rival magicians become obsessed with outperforming each other, leading to sacrifice, deception, obsession, and tragedy.",
+  "summary": "Two rival stage magicians become obsessed with creating the greatest illusion. The story explores rivalry, magic, obsession, sacrifice, secrets, competition, deception, and the cost of ambition.",
   "dna": {
     "structure": "Nonlinear",
     "tone": "Psychological",
@@ -80,7 +80,7 @@
 {
   "title": "Joker",
   "genre": "Psychological Drama",
-  "summary": "A lonely and mentally troubled man is pushed to society's edge and transforms into a symbol of chaos and rebellion.",
+  "summary": "A lonely and mentally troubled man is abandoned by society and slowly descends into madness. The story explores chaos, mental illness, isolation, rebellion, injustice, violence, identity, society, and transformation.",
   "dna": {
     "structure": "Linear",
     "tone": "Dark",
@@ -95,7 +95,7 @@
 {
   "title": "The Matrix",
   "genre": "Sci-Fi Action",
-  "summary": "A hacker discovers reality is a simulation and becomes humanity's hope in a war against intelligent machines.",
+  "summary": "A hacker discovers that reality is a simulation controlled by intelligent machines. The story explores artificial intelligence, freedom, rebellion, destiny, technology, virtual reality, awakening, humanity's survival, and the fight against oppression.",
   "dna": {
     "structure": "Hero Journey",
     "tone": "Philosophical",
@@ -110,7 +110,7 @@
 {
   "title": "Ex Machina",
   "genre": "Sci-Fi Psychological Thriller",
-  "summary": "A programmer evaluates a highly advanced AI and becomes trapped in a dangerous game of manipulation, consciousness, and identity.",
+  "summary": "A young programmer is invited to evaluate an advanced artificial intelligence. The story explores AI consciousness, manipulation, identity, technology, deception, trust, control, ethics, and the blurred line between humans and machines.",
   "dna": {
     "structure": "Linear",
     "tone": "Psychological",
@@ -120,6 +120,111 @@
     "protagonist_arc": "Disillusionment"
   },
   "pulsegraph": [20, 30, 50, 70, 95]
+},
+
+{
+  "title": "Blade Runner 2049",
+  "genre": "Sci-Fi Neo-Noir",
+  "summary": "A futuristic detective uncovers a secret that challenges humanity's understanding of identity and existence. The story explores artificial intelligence, memory, loneliness, humanity, consciousness, purpose, destiny, and what it means to be alive.",
+  "dna": {
+    "structure": "Linear",
+    "tone": "Psychological",
+    "pace": "Slow Burn",
+    "conflict": "Existential",
+    "ending": "Emotional Resolution",
+    "protagonist_arc": "Self Sacrifice"
+  },
+  "pulsegraph": [15, 25, 45, 70, 95]
+},
+
+{
+  "title": "Fight Club",
+  "genre": "Psychological Drama",
+  "summary": "A dissatisfied office worker forms an underground fight club that evolves into a dangerous movement exploring identity, masculinity, rebellion, and self-destruction.",
+  "dna": {
+    "structure": "Nonlinear",
+    "tone": "Psychological",
+    "pace": "Escalating",
+    "conflict": "Internal",
+    "ending": "Twist Ending",
+    "protagonist_arc": "Mental Collapse"
+  },
+  "pulsegraph": [20, 35, 55, 80, 100]
+},
+
+{
+  "title": "Whiplash",
+  "genre": "Drama",
+  "summary": "A talented young drummer pursues greatness under a demanding and abusive mentor. The story explores obsession, ambition, perfectionism, sacrifice, discipline, excellence, pressure, competition, and personal achievement.",
+  "dna": {
+    "structure": "Linear",
+    "tone": "Emotional",
+    "pace": "Escalating",
+    "conflict": "Internal",
+    "ending": "Victory Climax",
+    "protagonist_arc": "Power Ascension"
+  },
+  "pulsegraph": [15, 30, 50, 80, 100]
+},
+
+{
+  "title": "Dune",
+  "genre": "Epic Sci-Fi",
+  "summary": "A young noble is forced into exile and must embrace his destiny to lead a rebellion. The story explores prophecy, leadership, survival, war, destiny, political intrigue, power struggles, sacrifice, and revolution.",
+  "dna": {
+    "structure": "Rise to Power",
+    "tone": "Emotional",
+    "pace": "Slow Burn",
+    "conflict": "External",
+    "ending": "Victory Climax",
+    "protagonist_arc": "Power Ascension"
+  },
+  "pulsegraph": [20, 35, 55, 75, 95]
+},
+
+{
+  "title": "The Dark Knight",
+  "genre": "Crime Thriller",
+  "summary": "A vigilante hero protects a crime-ridden city from a chaotic criminal mastermind. The story explores justice, morality, chaos, order, crime, corruption, sacrifice, heroism, impossible choices, enemies, and the limits of force.",
+  "dna": {
+    "structure": "Linear",
+    "tone": "Psychological",
+    "pace": "Escalating",
+    "conflict": "External",
+    "ending": "Emotional Resolution",
+    "protagonist_arc": "Self Sacrifice"
+  },
+  "pulsegraph": [20, 40, 60, 85, 100]
+},
+
+{
+  "title": "The Social Network",
+  "genre": "Biographical Drama",
+  "summary": "A brilliant programmer creates a social networking platform that transforms the world. The story explores entrepreneurship, technology, startups, friendship, betrayal, ambition, innovation, competition, business rivalry, wealth, and success.",
+  "dna": {
+    "structure": "Linear",
+    "tone": "Emotional",
+    "pace": "Escalating",
+    "conflict": "External",
+    "ending": "Emotional Resolution",
+    "protagonist_arc": "Power Ascension"
+  },
+  "pulsegraph": [15, 30, 50, 75, 95]
+},
+
+{
+  "title": "Parasite",
+  "genre": "Thriller Drama",
+  "summary": "A poor family living in poverty gradually infiltrates the home of a wealthy family through deception and manipulation. The story explores class inequality, rich versus poor, wealth, poverty, social status, survival, greed, family loyalty, privilege, economic disparity, and tragedy.",
+  "dna":{  
+  "structure": "Linear",
+    "tone": "Psychological",
+    "pace": "Slow Burn",
+    "conflict": "External",
+    "ending": "Twist Ending",
+    "protagonist_arc": "Mental Collapse"
+},
+    "pulsegraph": [20, 35, 50, 75, 100]
 }
 
 ]

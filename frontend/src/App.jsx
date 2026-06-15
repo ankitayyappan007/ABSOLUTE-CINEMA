@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 import jsPDF from "jspdf";
 
@@ -9,6 +9,7 @@ import DNASection from "./components/DNASection";
 import InfluenceChart from "./components/InfluenceChart";
 import ScoreBar from "./components/ScoreBar";
 import BlueprintCard from "./components/BlueprintCard";
+import RadarScorecard from "./components/RadarScorecard";
 
 function App() {
 
@@ -876,7 +877,7 @@ data.feedback.improvements.forEach(
             <div style={cardStyle}>
 
               <h2>
-                Narrative PulseGraph
+                Story Intensity Curve
               </h2>
 
               <PulseGraph
@@ -884,6 +885,14 @@ data.feedback.improvements.forEach(
                   data.pulsegraph
                 }
               />
+              <p
+  style={{
+    color: "#9ca3af",
+    marginTop: "-10px"
+  }}
+>
+  Emotional and narrative intensity across the story.
+</p>
 
             </div>
 
@@ -999,15 +1008,16 @@ data.feedback.improvements.forEach(
 
     {" "}
 
+    
+
     {data.top_matches[1]?.title}
 
     {" "}
-
-    {
-  data.top_matches[1]
-    ? data.weights[data.top_matches[1].title]
-    : 0
-},
+(
+{data.top_matches[1]
+  ? data.weights[data.top_matches[1].title]
+  : 0}
+%)
 
     
 
@@ -1109,17 +1119,22 @@ data.feedback.improvements.forEach(
   </h2>
 
   <h1
-    style={{
-      fontSize: "3rem",
-      margin: 0
-    }}
-  >
-    {data.scorecard.overall}/100
-  </h1>
+  style={{
+    fontSize: "3rem",
+    marginBottom: "30px"
+  }}
+>
+  {data.scorecard.overall}/100
+</h1>
+
+<RadarScorecard
+  scorecard={data.scorecard}
+/>
+  
 
 </div>
 
-  
+
 
 </div>
 
