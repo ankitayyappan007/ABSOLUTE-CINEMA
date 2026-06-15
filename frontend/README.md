@@ -1,16 +1,72 @@
-# React + Vite
+## Live Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend:
+https://absolute-cinema-mocha.vercel.app
 
-Currently, two official plugins are available:
+Backend:
+https://absolute-cinema-api.onrender.com/docs
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+# ABSOLUTE CINEMA
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+An AI-powered story analysis platform that evaluates scripts and story ideas using semantic similarity, narrative DNA extraction, character analysis, theme detection, and originality scoring.
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Frontend: https://absolute-cinema-mocha.vercel.app
+
+Backend: https://absolute-cinema-api.onrender.com
+
+## Features
+
+* Movie similarity matching
+* Narrative DNA analysis
+* Theme detection
+* Character archetype analysis
+* Story scorecard
+* Radar chart visualization
+* Narrative pulse graph
+* PDF report generation
+
+## Tech Stack
+
+### Frontend
+
+* React
+* Vite
+* Recharts
+* jsPDF
+
+### Backend
+
+* FastAPI
+* Scikit-Learn
+* TF-IDF Vectorization
+
+### Deployment
+
+* Vercel
+* Render
+
+## Example Analysis
+
+Input:
+
+A hacker discovers that reality is a simulation controlled by intelligent machines.
+
+Output:
+
+* Closest Match: The Matrix
+* Genre: Sci-Fi Action
+* Narrative DNA
+* Story Scorecard
+* Theme Analysis
+* Character Profile
+
+## Future Improvements
+
+* AI Story Expansion
+* Larger Movie Knowledge Base
+* Genre Prediction
+* User Accounts
+* Saved Reports
