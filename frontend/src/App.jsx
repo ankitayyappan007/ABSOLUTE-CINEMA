@@ -40,7 +40,7 @@ function App() {
     try {
 
       const response = await fetch(
-        "http://127.0.0.1:8000/consultation-report-v4",
+        "https://absolute-cinema-api.onrender.com/consultation-report-v4",
         {
           method: "POST",
 
