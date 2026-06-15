@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 
 import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
+
 import autoTable from "jspdf-autotable";
 
 import PulseGraph from "./components/PulseGraph";
@@ -21,7 +21,7 @@ function App() {
   const [loading, setLoading] =
     useState(false);
 
-  const reportRef = useRef(null);  
+  
 
   const cardStyle = {
   border: "1px solid #444",
@@ -576,7 +576,7 @@ data.feedback.improvements.forEach(
     ABSOLUTE CINEMA
   </h1>
 </div>
-    
+
 
 
       <div
@@ -654,7 +654,7 @@ data.feedback.improvements.forEach(
 
         data && (
 
-          <div ref={reportRef}>
+          <div>
 
             <div style={cardStyle}>
 
@@ -667,7 +667,11 @@ data.feedback.improvements.forEach(
               </p>
 
             </div>
+          
+          
 
+
+            
             <div style={cardStyle}>
 
               <h2>
@@ -999,7 +1003,11 @@ data.feedback.improvements.forEach(
 
     {" "}
 
-    ({data.weights[data.top_matches[1]?.title]}%),
+    {
+  data.top_matches[1]
+    ? data.weights[data.top_matches[1].title]
+    : 0
+},
 
     
 
@@ -1124,6 +1132,7 @@ data.feedback.improvements.forEach(
   <div
   style={{
     display: "flex",
+    flexWrap: "wrap",
     alignItems: "center",
     gap: "15px",
     marginTop: "20px"
