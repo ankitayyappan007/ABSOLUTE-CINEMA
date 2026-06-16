@@ -46,6 +46,10 @@ from app.services.executive_summary_service import (
     ExecutiveSummaryService
 )
 
+from app.services.producer_notes_service import (
+    ProducerNotesService
+)
+
 router = APIRouter()
 
 analysis_service = ScriptAnalysisService()
@@ -74,6 +78,7 @@ summary_service = ExecutiveSummaryService()
 originality_service = (
     OriginalityReportService()
 )
+producer_notes_service = ProducerNotesService()
 
 
 class ScriptRequest(BaseModel):
@@ -249,6 +254,13 @@ def consultation_report_v4(
         theme_analysis
     )
 )
+    producer_notes = (
+    producer_notes_service.generate_notes(
+        genre,
+        scorecard
+    )
+)
+
 
     return {
 
@@ -298,5 +310,8 @@ def consultation_report_v4(
 "executive_summary": executive_summary,
 
 "originality_report":
-    originality_report
+    originality_report,
+    
+    "producer_notes":
+    producer_notes,
     }

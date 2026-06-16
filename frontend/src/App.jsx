@@ -681,7 +681,29 @@ data.feedback.improvements.forEach(
 
             </div>
           
-          
+          {
+  data.executive_summary && (
+
+    <div style={cardStyle}>
+
+      <h2>
+        Executive Summary
+      </h2>
+
+      <p
+        style={{
+          textAlign: "left",
+          lineHeight: "1.8",
+          fontSize: "1rem"
+        }}
+      >
+        {data.executive_summary}
+      </p>
+
+    </div>
+
+  )
+}
 
 
             
