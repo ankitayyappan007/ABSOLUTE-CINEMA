@@ -256,7 +256,7 @@ def consultation_report_v4(
 )
     producer_notes = (
     producer_notes_service.generate_notes(
-        genre,
+        analysis["genre"],
         scorecard
     )
 )
