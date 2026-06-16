@@ -9,6 +9,7 @@ from app.services.data_loader import (
 )
 
 
+
 class ScriptAnalysisService:
 
     def __init__(self):

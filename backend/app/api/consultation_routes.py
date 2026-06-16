@@ -42,6 +42,10 @@ from app.services.originality_report_service import (
     OriginalityReportService
 )
 
+from app.services.executive_summary_service import (
+    ExecutiveSummaryService
+)
+
 router = APIRouter()
 
 analysis_service = ScriptAnalysisService()
@@ -69,6 +73,8 @@ theme_service = (
 originality_service = (
     OriginalityReportService()
 )
+
+summary_service = ExecutiveSummaryService()
 
 class ScriptRequest(BaseModel):
     script_text: str
@@ -233,6 +239,16 @@ def consultation_report_v4(
         scorecard
     )
 )
+    closest_match = (
+    analysis["most_similar_movie"]
+)
+    executive_summary = (
+    summary_service.generate_summary(
+        closest_match,
+        scorecard,
+        theme_analysis
+    )
+)
 
     return {
 
@@ -279,6 +295,7 @@ def consultation_report_v4(
 "theme_analysis":
     theme_analysis,
 
+"executive_summary": executive_summary,
 
 "originality_report":
     originality_report
