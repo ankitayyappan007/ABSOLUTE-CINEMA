@@ -596,7 +596,10 @@ data.feedback.improvements.forEach(
           borderRadius: "12px",
           border: "1px solid #555",
           fontSize: "1rem",
-          boxSizing: "border-box"
+          boxSizing: "border-box",
+
+          background: "#444",
+  color: "white"
         }}
 
         placeholder=
@@ -625,7 +628,10 @@ data.feedback.improvements.forEach(
     cursor: "pointer",
     fontWeight: "bold",
     fontSize: "1.1rem",
-    minWidth: "200px"
+    minWidth: "200px",
+
+    background: "#666",
+  color: "white"
   }}
 >
         {
@@ -640,8 +646,14 @@ data.feedback.improvements.forEach(
     <button
       onClick={downloadPDF}
       style={{
-        marginLeft: "10px"
-      }}
+  marginLeft: "10px",
+  padding: "10px 18px",
+  borderRadius: "10px",
+  border: "none",
+  background: "#666",
+  color: "white",
+  cursor: "pointer"
+}}
     >
       Download Report
     </button>
