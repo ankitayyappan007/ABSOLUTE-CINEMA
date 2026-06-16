@@ -69,12 +69,12 @@ character_service = (
 theme_service = (
     ThemeAnalysisService()
 )
+summary_service = ExecutiveSummaryService()
 
 originality_service = (
     OriginalityReportService()
 )
 
-summary_service = ExecutiveSummaryService()
 
 class ScriptRequest(BaseModel):
     script_text: str
