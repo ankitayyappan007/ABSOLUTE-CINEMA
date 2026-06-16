@@ -1,34 +1,39 @@
-## Live Demo
+# 🎬 ABSOLUTE CINEMA
 
-Frontend:
+AI-Powered Story Analysis Platform
+
+ABSOLUTE CINEMA analyzes story ideas and scripts using semantic similarity, narrative DNA extraction, character analysis, theme detection, originality scoring, and visual storytelling analytics.
+
+---
+
+## 🚀 Live Demo
+
+### Frontend
+
 https://absolute-cinema-mocha.vercel.app
 
-Backend:
+### Backend API
+
 https://absolute-cinema-api.onrender.com/docs
 
+---
 
-# ABSOLUTE CINEMA
+## ✨ Features
 
-An AI-powered story analysis platform that evaluates scripts and story ideas using semantic similarity, narrative DNA extraction, character analysis, theme detection, and originality scoring.
+* Movie Similarity Matching
+* Narrative DNA Analysis
+* Theme Analysis
+* Character Profile Generation
+* Originality Report
+* Story Blueprint Generation
+* Story Scorecard
+* Radar Chart Visualization
+* Narrative Pulse Graph
+* PDF Report Export
 
-## Live Demo
+---
 
-Frontend: https://absolute-cinema-mocha.vercel.app
-
-Backend: https://absolute-cinema-api.onrender.com
-
-## Features
-
-* Movie similarity matching
-* Narrative DNA analysis
-* Theme detection
-* Character archetype analysis
-* Story scorecard
-* Radar chart visualization
-* Narrative pulse graph
-* PDF report generation
-
-## Tech Stack
+## 🛠 Tech Stack
 
 ### Frontend
 
@@ -48,25 +53,72 @@ Backend: https://absolute-cinema-api.onrender.com
 * Vercel
 * Render
 
-## Example Analysis
+---
 
-Input:
+## 📊 Analysis Output
 
-A hacker discovers that reality is a simulation controlled by intelligent machines.
+ABSOLUTE CINEMA generates:
 
-Output:
-
-* Closest Match: The Matrix
-* Genre: Sci-Fi Action
+* Closest Matching Film
+* Genre Classification
 * Narrative DNA
-* Story Scorecard
-* Theme Analysis
+* Story Intensity Curve
 * Character Profile
+* Theme Analysis
+* Originality Report
+* Commercial Potential Score
 
-## Future Improvements
+---
+
+## 📸 Screenshots
+
+Add screenshots from the screenshots folder here.
+
+Example:
+
+![Homepage](screenshots/home.png)
+
+![Radar Chart](screenshots/radar-chart.png)
+
+![Pulse Graph](screenshots/pulsegraph.png)
+
+---
+
+## 🏗 Architecture
+
+Frontend (React + Vite)
+
+⬇
+
+FastAPI Backend
+
+⬇
+
+TF-IDF Similarity Engine
+
+⬇
+
+Narrative DNA Generator
+
+⬇
+
+Story Analytics Dashboard
+
+---
+
+## 🔮 Future Improvements
 
 * AI Story Expansion
-* Larger Movie Knowledge Base
-* Genre Prediction
+* Genre Prediction Engine
+* Larger Movie Dataset
 * User Accounts
 * Saved Reports
+* Recommendation System
+
+---
+
+## 👨‍💻 Author
+
+Ankit Subhash Ayyappan
+
+Built as a full-stack AI storytelling analytics platform.
