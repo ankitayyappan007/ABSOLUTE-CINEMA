@@ -702,9 +702,48 @@ data.feedback.improvements.forEach(
 
     </div>
 
+
   )
 }
 
+{
+  data.producer_notes && (
+
+    <div style={cardStyle}>
+
+      <h2>
+        Producer Notes
+      </h2>
+
+      <p>
+        <strong>Budget Range:</strong>{" "}
+        {data.producer_notes.budget_range}
+      </p>
+
+      <p>
+        <strong>Target Audience:</strong>{" "}
+        {data.producer_notes.target_audience}
+      </p>
+
+      <p>
+        <strong>Streaming Potential:</strong>{" "}
+        {data.producer_notes.streaming_potential}
+      </p>
+
+      <p>
+        <strong>Theatrical Potential:</strong>{" "}
+        {data.producer_notes.theatrical_potential}
+      </p>
+
+      <p>
+        <strong>Franchise Potential:</strong>{" "}
+        {data.producer_notes.franchise_potential}
+      </p>
+
+    </div>
+
+  )
+}
 
             
             <div style={cardStyle}>
