@@ -285,6 +285,77 @@ pdf.text(
 
 y += 20;
 
+pdf.text(
+  "Executive Summary",
+  20,
+  y
+);
+
+y += 10;
+
+const summaryLines =
+  pdf.splitTextToSize(
+    data.executive_summary,
+    170
+  );
+
+pdf.text(
+  summaryLines,
+  20,
+  y
+);
+
+y += summaryLines.length * 7 + 10;
+
+pdf.text(
+  "Producer Notes",
+  20,
+  y
+);
+
+y += 10;
+
+pdf.text(
+  `Budget Range: ${data.producer_notes.budget_range}`,
+  20,
+  y
+);
+
+y += 8;
+
+pdf.text(
+  `Target Audience: ${data.producer_notes.target_audience}`,
+  20,
+  y
+);
+
+y += 8;
+
+pdf.text(
+  `Streaming Potential: ${data.producer_notes.streaming_potential}`,
+  20,
+  y
+);
+
+y += 8;
+
+pdf.text(
+  `Theatrical Potential: ${data.producer_notes.theatrical_potential}`,
+  20,
+  y
+);
+
+y += 8;
+
+pdf.text(
+  `Franchise Potential: ${data.producer_notes.franchise_potential}`,
+  20,
+  y
+);
+
+y += 15;
+
+
 pdf.addPage();
 
 y = 20;
@@ -398,7 +469,7 @@ data.character_profile.strengths.forEach(
     y += 8;
 
     pdf.text(
-      `✓ ${item}`,
+      `- ${item}`,
       25,
       y
     );
@@ -461,7 +532,70 @@ pdf.text(
   y
 );
 
+y += 35;
 
+if (y > 220) {
+  pdf.addPage();
+  y = 20;
+}
+
+pdf.text(
+  "Story Scorecard",
+  20,
+  y
+);
+
+y += 10;
+
+pdf.text(
+  `Originality: ${data.scorecard.originality}/100`,
+  20,
+  y
+);
+
+y += 8;
+
+pdf.text(
+  `Emotional Impact: ${data.scorecard.emotional_impact}/100`,
+  20,
+  y
+);
+
+y += 8;
+
+pdf.text(
+  `Character Depth: ${data.scorecard.character_depth}/100`,
+  20,
+  y
+);
+
+y += 8;
+
+pdf.text(
+  `Commercial Appeal: ${data.scorecard.commercial_appeal}/100`,
+  20,
+  y
+);
+
+y += 8;
+
+pdf.text(
+  `Cinematic Potential: ${data.scorecard.cinematic_potential}/100`,
+  20,
+  y
+);
+
+y += 12;
+
+pdf.setFontSize(14);
+
+pdf.text(
+  `Overall Score: ${data.scorecard.overall}/100`,
+  20,
+  y
+);
+
+pdf.setFontSize(12);
 
 y += 20;
 
@@ -539,6 +673,41 @@ data.feedback.improvements.forEach(
     );
 
   }
+);
+
+y += 20;
+
+pdf.setFontSize(16);
+
+pdf.text(
+  "Final Verdict",
+  20,
+  y
+);
+
+pdf.setFontSize(12);
+
+y += 12;
+
+pdf.text(
+  `Overall Score: ${data.scorecard.overall}/100`,
+  20,
+  y
+);
+
+y += 10;
+
+let recommendation =
+  data.scorecard.overall >= 80
+    ? "Strong recommendation for development and pitching."
+    : data.scorecard.overall >= 60
+    ? "Promising concept requiring further refinement."
+    : "Requires significant development before pitching.";
+
+pdf.text(
+  recommendation,
+  20,
+  y
 );
 
   pdf.save(
