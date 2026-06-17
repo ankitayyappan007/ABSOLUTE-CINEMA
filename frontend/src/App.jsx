@@ -910,9 +910,48 @@ pdf.text(
       </p>
 
     </div>
-
+    
+    
   )
 }
+
+{data.consultant_coverage && (
+  <div style={cardStyle}>
+    <h2>Consultant Coverage</h2>
+
+    <p>
+      <strong>Premise:</strong>{" "}
+      {data.consultant_coverage.premise}
+    </p>
+
+    <br />
+
+    <p><strong>Strengths</strong></p>
+
+    <ul>
+      {data.consultant_coverage.strengths.map(
+        (item, index) => (
+          <li key={index}>{item}</li>
+        )
+      )}
+    </ul>
+
+    <p><strong>Concerns</strong></p>
+
+    <ul>
+      {data.consultant_coverage.concerns.map(
+        (item, index) => (
+          <li key={index}>{item}</li>
+        )
+      )}
+    </ul>
+
+    <p>
+      <strong>Recommendation:</strong>{" "}
+      {data.consultant_coverage.recommendation}
+    </p>
+  </div>
+)}
 
             
             <div style={cardStyle}>
@@ -1652,6 +1691,66 @@ pdf.text(
     )
 
   }
+
+</div>
+
+<div style={cardStyle}>
+
+  <h2>
+    Final Verdict
+  </h2>
+
+  <div
+    style={{
+      textAlign: "center",
+      padding: "20px"
+    }}
+  >
+
+    <h1
+      style={{
+        color:
+          data.consultant_coverage.recommendation === "STRONGLY RECOMMEND"
+          ? "#00e676"
+          : data.consultant_coverage.recommendation === "RECOMMEND"
+          ? "#4caf50"
+          : data.consultant_coverage.recommendation === "CONSIDER"
+          ? "#ff9800"
+          : "#f44336"
+      }}
+    >
+      {
+        data.consultant_coverage.recommendation
+      }
+    </h1>
+
+    <p>
+      Overall Score:
+      {" "}
+      <strong>
+        {data.scorecard.overall}/100
+      </strong>
+    </p>
+
+    <p>
+      Originality:
+      {" "}
+      {data.scorecard.originality}/100
+    </p>
+
+    <p>
+      Commercial Appeal:
+      {" "}
+      {data.scorecard.commercial_appeal}/100
+    </p>
+
+    <p>
+      Cinematic Potential:
+      {" "}
+      {data.scorecard.cinematic_potential}/100
+    </p>
+
+  </div>
 
 </div>
         </div>

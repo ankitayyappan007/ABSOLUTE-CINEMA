@@ -44,10 +44,26 @@ class ConsultantCoverageService:
 
         overall = scorecard["overall"]
 
-        if overall >= 85:
+        overall = scorecard["overall"]
+        originality = scorecard["originality"]
+        commercial = scorecard["commercial_appeal"]
+        cinematic = scorecard["cinematic_potential"]
+
+        if (
+            overall >= 90
+            and originality >= 85
+            and commercial >= 85
+            and cinematic >= 85
+        ):
+            recommendation = "STRONGLY RECOMMEND"
+
+        elif (
+            overall >= 80
+            and originality >= 75
+        ):
             recommendation = "RECOMMEND"
 
-        elif overall >= 70:
+        elif overall >= 65:
             recommendation = "CONSIDER"
 
         else:

@@ -54,6 +54,10 @@ from app.services.consultant_coverage_service import (
     ConsultantCoverageService
 )
 
+from app.services.rewrite_priorities_service import (
+    RewritePrioritiesService
+)
+
 router = APIRouter()
 
 analysis_service = ScriptAnalysisService()
@@ -85,6 +89,10 @@ originality_service = (
 producer_notes_service = ProducerNotesService()
 
 coverage_service = ConsultantCoverageService()
+
+rewrite_service = (
+    RewritePrioritiesService()
+)
 
 class ScriptRequest(BaseModel):
     script_text: str
@@ -222,6 +230,16 @@ def consultation_report_v4(
         profile["dna"]
     )
 )
+    
+    rewrite_priorities = (
+    rewrite_service.generate_priorities(
+        scorecard,
+        profile["dna"]
+    )
+)
+    
+    print(rewrite_priorities)
+    
     blueprint = (
     blueprint_service
     .generate_blueprint(
@@ -310,6 +328,9 @@ def consultation_report_v4(
 "scorecard":
     scorecard,
 
+"rewrite_priorities":
+    rewrite_priorities,
+
 "blueprint":
     blueprint,
     
@@ -325,8 +346,8 @@ def consultation_report_v4(
 "originality_report":
     originality_report,
     
-    "producer_notes":
+"producer_notes":
     producer_notes,
-    "consultant_coverage":
+"consultant_coverage":
     consultant_coverage
     }
