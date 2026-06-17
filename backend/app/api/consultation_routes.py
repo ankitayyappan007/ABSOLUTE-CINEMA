@@ -50,6 +50,10 @@ from app.services.producer_notes_service import (
     ProducerNotesService
 )
 
+from app.services.consultant_coverage_service import (
+    ConsultantCoverageService
+)
+
 router = APIRouter()
 
 analysis_service = ScriptAnalysisService()
@@ -80,6 +84,7 @@ originality_service = (
 )
 producer_notes_service = ProducerNotesService()
 
+coverage_service = ConsultantCoverageService()
 
 class ScriptRequest(BaseModel):
     script_text: str
@@ -236,6 +241,7 @@ def consultation_report_v4(
         profile["dna"]
     )
 )
+    
     originality_report = (
     originality_service
     .generate_report(
@@ -258,6 +264,13 @@ def consultation_report_v4(
     producer_notes_service.generate_notes(
         analysis["genre"],
         scorecard
+    )
+)
+    consultant_coverage = (
+    coverage_service.generate_coverage(
+        closest_match,
+        scorecard,
+        theme_analysis
     )
 )
 
@@ -314,4 +327,6 @@ def consultation_report_v4(
     
     "producer_notes":
     producer_notes,
+    "consultant_coverage":
+    consultant_coverage
     }
