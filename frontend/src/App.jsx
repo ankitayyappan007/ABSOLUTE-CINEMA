@@ -1753,6 +1753,74 @@ pdf.text(
   </div>
 
 </div>
+
+{data.rewrite_priorities && (
+  <div style={cardStyle}>
+    <h2>Rewrite Priorities</h2>
+
+    {data.rewrite_priorities.map(
+      (item, index) => (
+        <p
+          key={index}
+          style={{
+            textAlign: "left",
+            marginBottom: "10px"
+          }}
+        >
+          {index + 1}. {item}
+        </p>
+      )
+    )}
+  </div>
+)}
+
+{data.development_notes && (
+  <>
+    <p>
+      DEBUG:
+      {JSON.stringify(data.development_notes)}
+    </p>
+
+  <div style={cardStyle}>
+
+    <h2>
+      Development Notes
+    </h2>
+
+    <p>
+      <strong>Character:</strong>
+      {" "}
+      {data.development_notes.character}
+    </p>
+
+    <br />
+
+    <p>
+      <strong>Theme:</strong>
+      {" "}
+      {data.development_notes.theme}
+    </p>
+
+    <br />
+
+    <p>
+      <strong>Structure:</strong>
+      {" "}
+      {data.development_notes.structure}
+    </p>
+
+    <br />
+
+    <p>
+      <strong>Ending:</strong>
+      {" "}
+      {data.development_notes.ending}
+    </p>
+
+  </div>
+  </>
+)}
+
         </div>
 
         )

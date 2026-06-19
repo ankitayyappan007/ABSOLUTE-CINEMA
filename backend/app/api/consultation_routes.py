@@ -58,6 +58,9 @@ from app.services.rewrite_priorities_service import (
     RewritePrioritiesService
 )
 
+from app.services.development_notes_service import (
+    DevelopmentNotesService
+)
 router = APIRouter()
 
 analysis_service = ScriptAnalysisService()
@@ -92,6 +95,10 @@ coverage_service = ConsultantCoverageService()
 
 rewrite_service = (
     RewritePrioritiesService()
+)
+
+development_service = (
+    DevelopmentNotesService()
 )
 
 class ScriptRequest(BaseModel):
@@ -240,6 +247,14 @@ def consultation_report_v4(
     
     print(rewrite_priorities)
     
+    development_notes = (
+    development_service.generate_notes(
+        scorecard,
+        profile["dna"]
+    )
+)
+    print(development_notes)
+    
     blueprint = (
     blueprint_service
     .generate_blueprint(
@@ -293,6 +308,8 @@ def consultation_report_v4(
 )
 
 
+
+
     return {
 
         "closest_match":
@@ -330,6 +347,9 @@ def consultation_report_v4(
 
 "rewrite_priorities":
     rewrite_priorities,
+    
+"development_notes":
+    development_notes,
 
 "blueprint":
     blueprint,
